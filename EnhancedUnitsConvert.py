@@ -56,4 +56,8 @@ def print_menu():
 		elif choice == 2:
 			f_c()
 
-print_menu()
+while True:
+	print_menu()
+	answer = raw_input('Would you like to exit? (y) for yes ')
+	if answer == 'y':
+		break
