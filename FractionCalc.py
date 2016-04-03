@@ -9,8 +9,10 @@ def divide(a, b):
 def multiply(a, b):
 	print 'Result of Multiplication: {0}'.format(a*b)
 
-a = Fraction(input("Enter first fraction: "))
-b = Fraction(input("Enter second fraction: "))
+a = Fraction(raw_input("Enter first fraction: "))
+b = Fraction(raw_input("Enter second fraction: "))
+print a
+print b
 op = raw_input('Operation to perform - Add, Subtract, Divide, Multiply: ')
 if op == 'Add':
 	add(a, b)
