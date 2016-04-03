@@ -11,8 +11,6 @@ def multiply(a, b):
 
 a = Fraction(raw_input("Enter first fraction: "))
 b = Fraction(raw_input("Enter second fraction: "))
-print a
-print b
 op = raw_input('Operation to perform - Add, Subtract, Divide, Multiply: ')
 if op == 'Add':
 	add(a, b)
