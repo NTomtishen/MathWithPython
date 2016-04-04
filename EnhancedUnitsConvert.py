@@ -1,26 +1,32 @@
 def km_miles():
 	km = float(input('Enter distance in kilometers: '))
-	print km / 1.609
+	print km / 1.609,
+	print 'Miles'
 
 def miles_km():
 	miles = float(input('Enter distance in miles: '))
-	print miles * 1.609
+	print miles * 1.609,
+	print 'Kilometers'
 
 def kgs_lbs():
 	kgs = float(input('Enter mass in kilograms: '))
-	print kgs * 2.20462
+	print kgs * 2.20462,
+	print 'Pounds'
 
 def lbs_kgs():
 	lbs = float(input('Enter mass in pounds: '))
-	print lbs * 0.453592
+	print lbs * 0.453592,
+	print 'Kilograms'
 
 def c_f():
 	c = float(input('Enter temperature in Celsius: '))
-	print (c * 1.8) + 32
+	print ((c * 1.8) + 32),
+	print 'F'
 
 def f_c():
 	f = float(input('Enter temperature in Fahrenheit: '))
-	print (f - 32) * 0.5556 
+	print ((f - 32) * 0.5556),
+	print 'C'
 
 def print_menu():
 
