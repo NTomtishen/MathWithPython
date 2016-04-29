@@ -27,7 +27,7 @@ def draw_trajectory(u, theta):
 		x.append(u*math.cos(theta)*t)
 		y.append(u*math.sin(theta)*t - 0.5*g*t*t)
 	draw_graph(x, y)
-
+'''
 try:
 	u = float(input('Enter the initial velocity (m/s): '))
 	theta = float(input('Enter the angle of projection (degrees): '))
@@ -36,3 +36,10 @@ except ValueError:
 else:
 	draw_trajectory(u, theta)
 	plt.show()
+'''
+u_list = [20, 40, 60]
+theta = 45
+for u in u_list:
+	draw_trajectory(u, theta)
+plt.legend(['20 m/s', '40 m/s', '60 m/s'])
+plt.show()
