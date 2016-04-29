@@ -62,5 +62,70 @@ def frequency_table(numbers):
 	for number in numbers_freq:
 		print ('{0}\t{1}'.format(number[0], number[1]))
 
+'''
 scores = [7, 8, 9, 2, 10, 9, 9, 9, 9, 4, 5, 6, 1, 5, 6, 7, 8, 6, 1, 10]
 frequency_table(scores)
+'''
+
+def find_range(numbers):
+	lowest = min(numbers)
+	highest = max(numbers)
+	r = highest - lowest
+
+	return lowest, highest, r
+
+'''
+donations = [100, 60, 70, 900, 100, 200, 500, 500, 503, 600, 1000, 1200]
+lowest, highest, r = find_range(donations)
+print('Lowest: {0} Highest: {1} Range: {2}'.format(lowest, highest, r))
+'''
+
+def find_differences(numbers):
+	mean = calculate_mean(numbers)
+	diff = []
+	for num in numbers:
+		diff.append(num - mean)
+	return diff
+
+def calculate_variance(numbers):
+	diff = find_differences(numbers)
+	squared_diff = []
+	for d in diff:
+		squared_diff.append(d ** 2)
+	sum_squared_diff = sum(squared_diff)
+	variance = sum_squared_diff/len(numbers)
+	return variance
+
+'''
+donations = [382, 389, 377, 397, 396, 368, 369, 392, 398, 367, 393, 396]
+variance = calculate_variance(donations)
+print('The variance of the list of numbers is {0}'.format(variance))
+std = variance ** 0.5
+print('The standard deviation of the list of numbers is {0}'.format(std))
+'''
+
+def find_corr_x_y(x, y):
+	n = len(x)
+	prod = []
+	for xi, yi in zip(x, y):
+		prod.append(xi*yi)
+	sum_prod_x_y = sum(prod)
+	sum_x = sum(x)
+	sum_y = sum(y)
+	squared_sum_x = sum_x ** 2
+	squared_sum_y = sum_y ** 2
+	x_square = []
+	for xi in x:
+		x_square.append(xi ** 2)
+	x_square_sum = sum(x_square)
+	y_square = []
+	for yi in y:
+		y_square.append(yi ** 2)
+	y_square_sum = sum(y_square)
+
+	numerator = n*sum_prod_x_y - sum_x*sum_y
+	denominator_term1 = n*x_square_sum - squared_sum_x
+	denominator_term2 = n*y_square_sum - squared_sum_y
+	denominator = (denominator_term1*denominator_term2)**0.5
+	correlation = numerator/denominator
+	return correlation
