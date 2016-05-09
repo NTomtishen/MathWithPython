@@ -1,6 +1,5 @@
 from sympy import *
 
-x = Symbol('x')
 exprstr = raw_input('Enter the expression: ')
 try:
 	expr = sympify(exprstr)
