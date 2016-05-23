@@ -2,10 +2,8 @@ import random
 '''
 print random.randint(1, 6)
 '''
-print random.random()
-'''
 def toss():
-	if random.random() < 2/3:
+	if random.random() < 2.0/3.0:
 		return 0
 	else:
 		return 1
@@ -20,4 +18,3 @@ for item in range(0, 100):
 	else:
 		heads += 1
 print tails, heads, total
-'''
