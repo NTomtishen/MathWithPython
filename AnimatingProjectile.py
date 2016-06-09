@@ -33,7 +33,12 @@ def create_animation(u, theta):
 	ax = plt.axes(xlim = (xmin, xmax), ylim = (ymin, ymax))
 	ax.set_aspect('equal')
 
-	circle = plt.Circle((xmin, xmax), 1)
+	radius = 0
+	if xmax > ymax:
+		radius += ymax/10.0
+	else:
+		radius += xmax/10.0
+	circle = plt.Circle((xmin, xmax), radius)
 	ax.add_patch(circle)
 
 	anim = animation.FuncAnimation(fig, update_position,
